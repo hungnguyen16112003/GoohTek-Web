@@ -5,22 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dịch Vụ Thiết Kế Website Chuyên Nghiệp</title>
     <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
   </head>
   <body>
     <!-- Header -->
+    <!-- Thay thế phần Header trong HTML -->
     <header class="header">
       <nav class="navbar">
         <div class="container">
           <div class="logo">WebPro</div>
-          <ul class="nav-menu">
-            <li><a href="#home">Trang chủ</a></li>
-            <li><a href="#services">Dịch vụ</a></li>
-            <li><a href="#portfolio">Mẫu website</a></li>
-            <li><a href="#pricing">Bảng giá</a></li>
-            <li><a href="#contact">Liên hệ</a></li>
+
+          <!-- Hamburger Menu Button -->
+          <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+
+          <!-- Navigation Menu -->
+          <ul class="nav-menu" id="navMenu">
+            <li><a href="#home" class="nav-link">Trang chủ</a></li>
+            <li><a href="#services" class="nav-link">Dịch vụ</a></li>
+            <li><a href="#portfolio" class="nav-link">Mẫu website</a></li>
+            <li><a href="#pricing" class="nav-link">Bảng giá</a></li>
+            <li><a href="#contact" class="nav-link">Liên hệ</a></li>
           </ul>
         </div>
       </nav>
+
+      <!-- Overlay -->
+      <div class="nav-overlay" id="navOverlay"></div>
     </header>
 
     <!-- Hero Section -->
