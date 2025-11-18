@@ -3,421 +3,2702 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dịch Vụ Thiết Kế Website Chuyên Nghiệp</title>
-    <link rel="stylesheet" href="styles.css" />
-    <script src="script.js" defer></script>
+    <title>NexGen - Tương Lai Trong Tầm Tay</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        overflow-x: hidden;
+        background: #0a0a0a;
+        color: #fff;
+      }
+
+      /* Animated Background */
+      .animated-bg {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        background: linear-gradient(45deg, #0a0a0a, #1a0a2e, #16213e, #0a0a0a);
+        background-size: 400% 400%;
+        animation: gradientShift 15s ease infinite;
+      }
+
+      .animated-bg::before {
+        content: "";
+        position: absolute;
+        width: 200%;
+        height: 200%;
+        background: radial-gradient(
+          circle,
+          rgba(138, 43, 226, 0.15) 0%,
+          transparent 70%
+        );
+        animation: rotate 20s linear infinite;
+      }
+
+      @keyframes gradientShift {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+
+      @keyframes rotate {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+      /* Advanced Particles */
+      .particles {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: -1;
+      }
+
+      .particle {
+        position: absolute;
+        border-radius: 50%;
+        animation: float 6s infinite;
+      }
+
+      .particle:nth-child(1) {
+        left: 10%;
+        top: 20%;
+        width: 8px;
+        height: 8px;
+        background: rgba(138, 43, 226, 0.6);
+        animation-delay: 0s;
+      }
+      .particle:nth-child(2) {
+        left: 20%;
+        top: 80%;
+        width: 6px;
+        height: 6px;
+        background: rgba(102, 126, 234, 0.6);
+        animation-delay: 1s;
+      }
+      .particle:nth-child(3) {
+        left: 30%;
+        top: 40%;
+        width: 10px;
+        height: 10px;
+        background: rgba(118, 75, 162, 0.6);
+        animation-delay: 2s;
+      }
+      .particle:nth-child(4) {
+        left: 40%;
+        top: 60%;
+        width: 5px;
+        height: 5px;
+        background: rgba(240, 147, 251, 0.6);
+        animation-delay: 1.5s;
+      }
+      .particle:nth-child(5) {
+        left: 50%;
+        top: 30%;
+        width: 7px;
+        height: 7px;
+        background: rgba(138, 43, 226, 0.6);
+        animation-delay: 0.5s;
+      }
+      .particle:nth-child(6) {
+        left: 60%;
+        top: 70%;
+        width: 9px;
+        height: 9px;
+        background: rgba(102, 126, 234, 0.6);
+        animation-delay: 2.5s;
+      }
+      .particle:nth-child(7) {
+        left: 70%;
+        top: 50%;
+        width: 6px;
+        height: 6px;
+        background: rgba(118, 75, 162, 0.6);
+        animation-delay: 1s;
+      }
+      .particle:nth-child(8) {
+        left: 80%;
+        top: 20%;
+        width: 8px;
+        height: 8px;
+        background: rgba(240, 147, 251, 0.6);
+        animation-delay: 3s;
+      }
+      .particle:nth-child(9) {
+        left: 90%;
+        top: 85%;
+        width: 5px;
+        height: 5px;
+        background: rgba(138, 43, 226, 0.6);
+        animation-delay: 0.8s;
+      }
+      .particle:nth-child(10) {
+        left: 15%;
+        top: 65%;
+        width: 7px;
+        height: 7px;
+        background: rgba(102, 126, 234, 0.6);
+        animation-delay: 2.2s;
+      }
+      .particle:nth-child(11) {
+        left: 25%;
+        top: 15%;
+        width: 6px;
+        height: 6px;
+        background: rgba(118, 75, 162, 0.6);
+        animation-delay: 1.8s;
+      }
+      .particle:nth-child(12) {
+        left: 35%;
+        top: 75%;
+        width: 9px;
+        height: 9px;
+        background: rgba(240, 147, 251, 0.6);
+        animation-delay: 0.3s;
+      }
+      .particle:nth-child(13) {
+        left: 45%;
+        top: 35%;
+        width: 5px;
+        height: 5px;
+        background: rgba(138, 43, 226, 0.6);
+        animation-delay: 2.7s;
+      }
+      .particle:nth-child(14) {
+        left: 55%;
+        top: 55%;
+        width: 8px;
+        height: 8px;
+        background: rgba(102, 126, 234, 0.6);
+        animation-delay: 1.2s;
+      }
+      .particle:nth-child(15) {
+        left: 65%;
+        top: 25%;
+        width: 7px;
+        height: 7px;
+        background: rgba(118, 75, 162, 0.6);
+        animation-delay: 3.5s;
+      }
+
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateY(0) translateX(0) scale(1);
+          opacity: 0.5;
+        }
+        25% {
+          transform: translateY(-30px) translateX(20px) scale(1.3);
+          opacity: 0.8;
+        }
+        50% {
+          transform: translateY(-60px) translateX(-15px) scale(1.8);
+          opacity: 1;
+        }
+        75% {
+          transform: translateY(-30px) translateX(25px) scale(1.3);
+          opacity: 0.8;
+        }
+      }
+
+      /* Header */
+      header {
+        padding: 20px 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        animation: slideDown 1s ease;
+        position: sticky;
+        top: 0;
+        background: rgba(10, 10, 10, 0.9);
+        backdrop-filter: blur(20px);
+        z-index: 100;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      }
+
+      @keyframes slideDown {
+        from {
+          transform: translateY(-100px);
+          opacity: 0;
+        }
+        to {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+
+      .logo {
+        font-size: 32px;
+        font-weight: bold;
+        background: linear-gradient(
+          135deg,
+          #667eea 0%,
+          #764ba2 50%,
+          #f093fb 100%
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: logoGlow 3s ease-in-out infinite,
+          logoFloat 3s ease-in-out infinite;
+        position: relative;
+      }
+
+      @keyframes logoGlow {
+        0%,
+        100% {
+          filter: drop-shadow(0 0 15px rgba(102, 126, 234, 0.6));
+        }
+        50% {
+          filter: drop-shadow(0 0 30px rgba(118, 75, 162, 0.9));
+        }
+      }
+
+      @keyframes logoFloat {
+        0%,
+        100% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(-5px);
+        }
+      }
+
+      nav a {
+        color: #fff;
+        text-decoration: none;
+        margin: 0 20px;
+        position: relative;
+        transition: all 0.3s;
+        padding: 5px 0;
+      }
+
+      nav a::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        width: 0;
+        height: 2px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        transform: translateX(-50%);
+      }
+
+      nav a:hover::after {
+        width: 100%;
+      }
+
+      nav a:hover {
+        color: #667eea;
+        transform: translateY(-2px);
+      }
+
+      /* Hero Section */
+      .hero {
+        text-align: center;
+        padding: 180px 20px;
+        position: relative;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        overflow: hidden;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        width: 600px;
+        height: 600px;
+        background: radial-gradient(
+          circle,
+          rgba(102, 126, 234, 0.15) 0%,
+          transparent 70%
+        );
+        border-radius: 50%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        animation: heroGlow 8s ease-in-out infinite;
+      }
+
+      @keyframes heroGlow {
+        0%,
+        100% {
+          transform: translate(-50%, -50%) scale(1);
+          opacity: 0.5;
+        }
+        50% {
+          transform: translate(-50%, -50%) scale(1.3);
+          opacity: 0.8;
+        }
+      }
+
+      .hero h1 {
+        font-size: 82px;
+        margin-bottom: 30px;
+        animation: fadeInUp 1s ease 0.3s backwards,
+          textGlow 4s ease-in-out infinite;
+        background: linear-gradient(
+          135deg,
+          #667eea 0%,
+          #764ba2 30%,
+          #f093fb 60%,
+          #667eea 100%
+        );
+        background-size: 200% 200%;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        position: relative;
+        z-index: 1;
+      }
+
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(60px) scale(0.9);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0) scale(1);
+        }
+      }
+
+      @keyframes textGlow {
+        0%,
+        100% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+      }
+
+      .hero p {
+        font-size: 28px;
+        margin-bottom: 50px;
+        animation: fadeInUp 1s ease 0.6s backwards;
+        color: #b0b0b0;
+        position: relative;
+        z-index: 1;
+      }
+
+      .cta-button {
+        display: inline-block;
+        padding: 22px 60px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: #fff;
+        text-decoration: none;
+        border-radius: 50px;
+        font-size: 20px;
+        font-weight: bold;
+        position: relative;
+        overflow: hidden;
+        animation: fadeInUp 1s ease 0.9s backwards,
+          buttonFloat 3s ease-in-out infinite;
+        transition: all 0.4s;
+        z-index: 1;
+        box-shadow: 0 10px 40px rgba(102, 126, 234, 0.4);
+      }
+
+      @keyframes buttonFloat {
+        0%,
+        100% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(-8px);
+        }
+      }
+
+      .cta-button::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(255, 255, 255, 0.4),
+          transparent
+        );
+        transition: left 0.6s;
+      }
+
+      .cta-button:hover::before {
+        left: 100%;
+      }
+
+      .cta-button:hover {
+        transform: scale(1.08);
+        box-shadow: 0 15px 50px rgba(102, 126, 234, 0.6);
+      }
+
+      /* Rotating 3D Cards */
+      .rotating-cards {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        margin-top: 80px;
+        flex-wrap: wrap;
+        position: relative;
+        z-index: 1;
+      }
+
+      .rotating-card {
+        width: 280px;
+        height: 180px;
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(15px);
+        border-radius: 20px;
+        padding: 30px;
+        animation: rotate3D 6s ease-in-out infinite;
+        box-shadow: 0 20px 60px rgba(138, 43, 226, 0.3);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        transition: all 0.5s;
+        position: relative;
+      }
+
+      .rotating-card:nth-child(1) {
+        animation-delay: 0s;
+      }
+      .rotating-card:nth-child(2) {
+        animation-delay: 0.5s;
+      }
+      .rotating-card:nth-child(3) {
+        animation-delay: 1s;
+      }
+
+      @keyframes rotate3D {
+        0%,
+        100% {
+          transform: perspective(1000px) rotateY(0deg) rotateX(0deg);
+        }
+        25% {
+          transform: perspective(1000px) rotateY(10deg) rotateX(-5deg);
+        }
+        50% {
+          transform: perspective(1000px) rotateY(0deg) rotateX(5deg);
+        }
+        75% {
+          transform: perspective(1000px) rotateY(-10deg) rotateX(-5deg);
+        }
+      }
+
+      .rotating-card:hover {
+        transform: perspective(1000px) rotateY(15deg) scale(1.1) !important;
+        box-shadow: 0 30px 80px rgba(138, 43, 226, 0.5);
+      }
+
+      .rotating-card h3 {
+        font-size: 24px;
+        margin-bottom: 15px;
+        background: linear-gradient(135deg, #667eea 0%, #f093fb 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      /* Animated Wave Divider */
+      .wave-divider {
+        position: relative;
+        height: 150px;
+        overflow: hidden;
+      }
+
+      .wave {
+        position: absolute;
+        width: 200%;
+        height: 100%;
+        background: linear-gradient(
+          135deg,
+          rgba(102, 126, 234, 0.1) 0%,
+          rgba(118, 75, 162, 0.1) 100%
+        );
+        animation: wave 10s linear infinite;
+      }
+
+      .wave:nth-child(2) {
+        opacity: 0.5;
+        animation: wave 15s linear infinite reverse;
+      }
+
+      @keyframes wave {
+        0% {
+          transform: translateX(0) translateY(0);
+        }
+        50% {
+          transform: translateX(-25%) translateY(-20px);
+        }
+        100% {
+          transform: translateX(-50%) translateY(0);
+        }
+      }
+
+      /* Stats Section with Counter Animation */
+      .stats {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 40px;
+        padding: 120px 50px;
+        max-width: 1300px;
+        margin: 0 auto;
+      }
+
+      .stat-card {
+        text-align: center;
+        padding: 50px 30px;
+        background: rgba(255, 255, 255, 0.03);
+        backdrop-filter: blur(15px);
+        border-radius: 25px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .stat-card::before {
+        content: "";
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: radial-gradient(
+          circle,
+          rgba(102, 126, 234, 0.1) 0%,
+          transparent 70%
+        );
+        animation: statGlow 4s ease-in-out infinite;
+      }
+
+      @keyframes statGlow {
+        0%,
+        100% {
+          transform: scale(0.8) rotate(0deg);
+          opacity: 0.3;
+        }
+        50% {
+          transform: scale(1.2) rotate(180deg);
+          opacity: 0.6;
+        }
+      }
+
+      .stat-card:hover {
+        transform: translateY(-15px) scale(1.05);
+        background: rgba(255, 255, 255, 0.08);
+        box-shadow: 0 25px 50px rgba(138, 43, 226, 0.4);
+        border-color: rgba(102, 126, 234, 0.3);
+      }
+
+      .stat-number {
+        font-size: 64px;
+        font-weight: bold;
+        background: linear-gradient(
+          135deg,
+          #667eea 0%,
+          #764ba2 50%,
+          #f093fb 100%
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: countUp 2s ease, numberPulse 2s ease-in-out infinite;
+        position: relative;
+        z-index: 1;
+      }
+
+      @keyframes countUp {
+        from {
+          opacity: 0;
+          transform: scale(0.3) rotate(-10deg);
+        }
+        to {
+          opacity: 1;
+          transform: scale(1) rotate(0deg);
+        }
+      }
+
+      @keyframes numberPulse {
+        0%,
+        100% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.05);
+        }
+      }
+
+      .stat-label {
+        margin-top: 15px;
+        color: #a0a0a0;
+        font-size: 20px;
+        position: relative;
+        z-index: 1;
+      }
+
+      /* Features Grid with Stagger Effect */
+      .features {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 35px;
+        padding: 120px 50px;
+        max-width: 1300px;
+        margin: 0 auto;
+      }
+
+      .feature-card {
+        background: rgba(255, 255, 255, 0.03);
+        backdrop-filter: blur(15px);
+        padding: 45px;
+        border-radius: 25px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .feature-card::before {
+        content: "";
+        position: absolute;
+        top: -100%;
+        left: -100%;
+        width: 300%;
+        height: 300%;
+        background: linear-gradient(
+          45deg,
+          transparent,
+          rgba(102, 126, 234, 0.1),
+          transparent
+        );
+        transition: all 0.6s;
+      }
+
+      .feature-card:hover::before {
+        top: -50%;
+        left: -50%;
+        transform: rotate(45deg);
+      }
+
+      .feature-card:hover {
+        transform: translateY(-25px) scale(1.05) rotate(2deg);
+        background: rgba(255, 255, 255, 0.08);
+        box-shadow: 0 35px 70px rgba(138, 43, 226, 0.5);
+        border-color: rgba(102, 126, 234, 0.4);
+      }
+
+      .feature-icon {
+        font-size: 56px;
+        margin-bottom: 25px;
+        display: inline-block;
+        animation: iconBounce 2s ease-in-out infinite;
+        filter: drop-shadow(0 0 20px rgba(102, 126, 234, 0.5));
+      }
+
+      @keyframes iconBounce {
+        0%,
+        100% {
+          transform: translateY(0) rotate(0deg);
+        }
+        25% {
+          transform: translateY(-15px) rotate(-5deg);
+        }
+        75% {
+          transform: translateY(-15px) rotate(5deg);
+        }
+      }
+
+      .feature-card:hover .feature-icon {
+        animation: iconSpin 0.8s ease;
+      }
+
+      @keyframes iconSpin {
+        0% {
+          transform: rotate(0deg) scale(1);
+        }
+        50% {
+          transform: rotate(180deg) scale(1.3);
+        }
+        100% {
+          transform: rotate(360deg) scale(1);
+        }
+      }
+
+      .feature-card h3 {
+        font-size: 26px;
+        margin-bottom: 18px;
+        color: #fff;
+      }
+
+      .feature-card p {
+        color: #a0a0a0;
+        line-height: 1.8;
+        font-size: 16px;
+      }
+
+      /* Parallax Image Section */
+      .parallax-section {
+        position: relative;
+        height: 500px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        margin: 100px 0;
+      }
+
+      .parallax-bg {
+        position: absolute;
+        width: 100%;
+        height: 120%;
+        background: linear-gradient(
+          135deg,
+          rgba(102, 126, 234, 0.2) 0%,
+          rgba(118, 75, 162, 0.2) 100%
+        );
+        animation: parallaxMove 20s ease-in-out infinite;
+      }
+
+      @keyframes parallaxMove {
+        0%,
+        100% {
+          transform: translateY(0) scale(1);
+        }
+        50% {
+          transform: translateY(-30px) scale(1.1);
+        }
+      }
+
+      .parallax-content {
+        position: relative;
+        z-index: 1;
+        text-align: center;
+        padding: 50px;
+        background: rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(20px);
+        border-radius: 30px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        animation: contentFloat 4s ease-in-out infinite;
+      }
+
+      @keyframes contentFloat {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-20px);
+        }
+      }
+
+      .parallax-content h2 {
+        font-size: 48px;
+        margin-bottom: 20px;
+        background: linear-gradient(135deg, #667eea 0%, #f093fb 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .parallax-content p {
+        font-size: 22px;
+        color: #b0b0b0;
+      }
+
+      /* Testimonials with Slide Animation */
+      .testimonials {
+        padding: 120px 50px;
+        max-width: 1300px;
+        margin: 0 auto;
+      }
+
+      .section-title {
+        text-align: center;
+        font-size: 56px;
+        margin-bottom: 70px;
+        background: linear-gradient(
+          135deg,
+          #667eea 0%,
+          #764ba2 50%,
+          #f093fb 100%
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: titleWave 3s ease-in-out infinite;
+      }
+
+      @keyframes titleWave {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-10px);
+        }
+      }
+
+      .testimonial-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 35px;
+      }
+
+      .testimonial-card {
+        background: rgba(255, 255, 255, 0.03);
+        backdrop-filter: blur(15px);
+        padding: 45px;
+        border-radius: 25px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .testimonial-card::before {
+        content: '"';
+        position: absolute;
+        top: 20px;
+        left: 30px;
+        font-size: 100px;
+        color: rgba(102, 126, 234, 0.15);
+        font-family: Georgia, serif;
+        animation: quoteFloat 4s ease-in-out infinite;
+      }
+
+      @keyframes quoteFloat {
+        0%,
+        100% {
+          transform: rotate(0deg);
+          opacity: 0.15;
+        }
+        50% {
+          transform: rotate(-5deg);
+          opacity: 0.25;
+        }
+      }
+
+      .testimonial-card:hover {
+        transform: scale(1.08) rotate(-2deg);
+        box-shadow: 0 25px 60px rgba(138, 43, 226, 0.4);
+        border-color: rgba(102, 126, 234, 0.3);
+      }
+
+      .testimonial-text {
+        color: #b0b0b0;
+        line-height: 2;
+        margin-bottom: 25px;
+        font-size: 16px;
+        position: relative;
+        z-index: 1;
+      }
+
+      .testimonial-author {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+        position: relative;
+        z-index: 1;
+      }
+
+      .author-avatar {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 28px;
+        animation: avatarPulse 2s ease-in-out infinite;
+        box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+      }
+
+      @keyframes avatarPulse {
+        0%,
+        100% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.1);
+        }
+      }
+
+      .author-info h4 {
+        color: #fff;
+        margin-bottom: 6px;
+        font-size: 18px;
+      }
+
+      .author-info p {
+        color: #667eea;
+        font-size: 14px;
+      }
+
+      /* Pricing with Flip Animation */
+      .pricing {
+        padding: 120px 50px;
+        max-width: 1300px;
+        margin: 0 auto;
+      }
+
+      .pricing-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 35px;
+        margin-top: 70px;
+      }
+
+      .pricing-card {
+        background: rgba(255, 255, 255, 0.03);
+        backdrop-filter: blur(15px);
+        padding: 50px 40px;
+        border-radius: 25px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .pricing-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(102, 126, 234, 0.1),
+          transparent
+        );
+        transition: left 0.8s;
+      }
+
+      .pricing-card:hover::before {
+        left: 100%;
+      }
+
+      .pricing-card.featured {
+        background: linear-gradient(
+          135deg,
+          rgba(102, 126, 234, 0.15) 0%,
+          rgba(118, 75, 162, 0.15) 100%
+        );
+        border: 2px solid rgba(102, 126, 234, 0.6);
+        transform: scale(1.08);
+        box-shadow: 0 20px 60px rgba(138, 43, 226, 0.4);
+      }
+
+      .pricing-card:hover {
+        transform: translateY(-20px) scale(1.08) rotateY(5deg);
+        box-shadow: 0 35px 70px rgba(138, 43, 226, 0.5);
+      }
+
+      .pricing-card.featured:hover {
+        transform: translateY(-20px) scale(1.12) rotateY(5deg);
+      }
+
+      .plan-badge {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: #fff;
+        padding: 8px 20px;
+        border-radius: 20px;
+        font-size: 12px;
+        font-weight: bold;
+        animation: badgePulse 2s ease-in-out infinite;
+      }
+
+      @keyframes badgePulse {
+        0%,
+        100% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.1);
+        }
+      }
+
+      .plan-name {
+        font-size: 28px;
+        margin-bottom: 25px;
+        color: #fff;
+      }
+
+      .plan-price {
+        font-size: 56px;
+        font-weight: bold;
+        background: linear-gradient(
+          135deg,
+          #667eea 0%,
+          #764ba2 50%,
+          #f093fb 100%
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-bottom: 12px;
+        animation: priceGlow 3s ease-in-out infinite;
+      }
+
+      @keyframes priceGlow {
+        0%,
+        100% {
+          filter: drop-shadow(0 0 10px rgba(102, 126, 234, 0.3));
+        }
+        50% {
+          filter: drop-shadow(0 0 25px rgba(102, 126, 234, 0.6));
+        }
+      }
+
+      .plan-period {
+        color: #777;
+        margin-bottom: 35px;
+        font-size: 16px;
+      }
+
+      .plan-features {
+        list-style: none;
+        margin-bottom: 35px;
+        text-align: left;
+      }
+
+      .plan-features li {
+        padding: 12px 0;
+        color: #b0b0b0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        transition: all 0.3s;
+      }
+
+      .plan-features li:hover {
+        padding-left: 10px;
+        color: #fff;
+      }
+
+      .plan-features li:before {
+        content: "✓ ";
+        color: #667eea;
+        margin-right: 12px;
+        font-weight: bold;
+      }
+
+      /* Gallery with Masonry Effect */
+      .gallery {
+        padding: 120px 50px;
+        max-width: 1400px;
+        margin: 0 auto;
+      }
+
+      .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 25px;
+        margin-top: 70px;
+      }
+
+      .gallery-item {
+        height: 320px;
+        background: linear-gradient(
+          135deg,
+          #667eea 0%,
+          #764ba2 50%,
+          #f093fb 100%
+        );
+        border-radius: 25px;
+        overflow: hidden;
+        position: relative;
+        transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        cursor: pointer;
+        animation: galleryFloat 4s ease-in-out infinite;
+      }
+
+      .gallery-item:nth-child(odd) {
+        animation-delay: 0.5s;
+      }
+
+      @keyframes galleryFloat {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-15px);
+        }
+      }
+
+      .gallery-item:hover {
+        transform: scale(1.1) rotate(3deg);
+        box-shadow: 0 30px 70px rgba(138, 43, 226, 0.5);
+        z-index: 10;
+      }
+
+      .gallery-item::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(
+          180deg,
+          transparent 0%,
+          rgba(0, 0, 0, 0.7) 100%
+        );
+        transition: all 0.4s;
+      }
+
+      .gallery-item:hover::before {
+        background: linear-gradient(
+          180deg,
+          rgba(0, 0, 0, 0.2) 0%,
+          rgba(0, 0, 0, 0.4) 100%
+        );
+      }
+
+      .gallery-overlay {
+        position: absolute;
+        bottom: 25px;
+        left: 25px;
+        color: #fff;
+        z-index: 1;
+        transition: all 0.4s;
+      }
+
+      .gallery-item:hover .gallery-overlay {
+        transform: translateY(-10px);
+      }
+
+      .gallery-overlay h4 {
+        font-size: 24px;
+        margin-bottom: 8px;
+        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+      }
+
+      .gallery-overlay p {
+        font-size: 15px;
+        opacity: 0.9;
+        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+      }
+
+      /* Team with Flip Cards */
+      .team {
+        padding: 120px 50px;
+        max-width: 1300px;
+        margin: 0 auto;
+      }
+
+      .team-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 35px;
+        margin-top: 70px;
+      }
+
+      .team-card {
+        background: rgba(255, 255, 255, 0.03);
+        backdrop-filter: blur(15px);
+        padding: 40px;
+        border-radius: 25px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        text-align: center;
+        transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .team-card::before {
+        content: "";
+        position: absolute;
+        top: -100%;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          180deg,
+          transparent,
+          rgba(102, 126, 234, 0.1)
+        );
+        transition: top 0.6s;
+      }
+
+      .team-card:hover::before {
+        top: 0;
+      }
+
+      .team-card:hover {
+        transform: translateY(-15px) scale(1.05);
+        box-shadow: 0 30px 60px rgba(138, 43, 226, 0.4);
+        border-color: rgba(102, 126, 234, 0.3);
+      }
+
+      .team-avatar {
+        width: 140px;
+        height: 140px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        margin: 0 auto 25px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 56px;
+        transition: all 0.6s;
+        box-shadow: 0 10px 40px rgba(102, 126, 234, 0.4);
+        animation: avatarRotate 8s linear infinite;
+      }
+
+      @keyframes avatarRotate {
+        0%,
+        100% {
+          transform: rotate(0deg);
+        }
+        50% {
+          transform: rotate(180deg);
+        }
+      }
+
+      .team-card:hover .team-avatar {
+        transform: scale(1.15) rotate(360deg);
+        animation: none;
+      }
+
+      .team-name {
+        font-size: 26px;
+        margin-bottom: 8px;
+        color: #fff;
+        position: relative;
+        z-index: 1;
+      }
+
+      .team-role {
+        color: #667eea;
+        margin-bottom: 18px;
+        font-size: 16px;
+        font-weight: 500;
+        position: relative;
+        z-index: 1;
+      }
+
+      .team-desc {
+        color: #a0a0a0;
+        line-height: 1.8;
+        font-size: 15px;
+        position: relative;
+        z-index: 1;
+      }
+
+      /* Process Timeline */
+      .process {
+        padding: 120px 50px;
+        max-width: 1200px;
+        margin: 0 auto;
+        position: relative;
+      }
+
+      .timeline {
+        position: relative;
+        margin-top: 70px;
+      }
+
+      .timeline::before {
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: 0;
+        bottom: 0;
+        width: 3px;
+        background: linear-gradient(
+          180deg,
+          #667eea 0%,
+          #764ba2 50%,
+          #f093fb 100%
+        );
+        transform: translateX(-50%);
+        animation: lineGrow 2s ease-in-out;
+      }
+
+      @keyframes lineGrow {
+        from {
+          height: 0;
+        }
+        to {
+          height: 100%;
+        }
+      }
+
+      .timeline-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 80px;
+        position: relative;
+        animation: timelineFadeIn 1s ease backwards;
+      }
+
+      .timeline-item:nth-child(1) {
+        animation-delay: 0.2s;
+      }
+      .timeline-item:nth-child(2) {
+        animation-delay: 0.4s;
+      }
+      .timeline-item:nth-child(3) {
+        animation-delay: 0.6s;
+      }
+      .timeline-item:nth-child(4) {
+        animation-delay: 0.8s;
+      }
+
+      @keyframes timelineFadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .timeline-item:nth-child(even) {
+        flex-direction: row-reverse;
+      }
+
+      .timeline-content {
+        flex: 1;
+        background: rgba(255, 255, 255, 0.03);
+        backdrop-filter: blur(15px);
+        padding: 40px;
+        border-radius: 25px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        transition: all 0.5s;
+        position: relative;
+      }
+
+      .timeline-content:hover {
+        transform: scale(1.05);
+        background: rgba(255, 255, 255, 0.08);
+        box-shadow: 0 20px 50px rgba(138, 43, 226, 0.4);
+      }
+
+      .timeline-item:nth-child(odd) .timeline-content {
+        margin-right: 50%;
+        margin-left: 0;
+        padding-right: 60px;
+      }
+
+      .timeline-item:nth-child(even) .timeline-content {
+        margin-left: 50%;
+        margin-right: 0;
+        padding-left: 60px;
+      }
+
+      .timeline-icon {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 70px;
+        height: 70px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 32px;
+        animation: iconPulse 2s ease-in-out infinite;
+        box-shadow: 0 0 30px rgba(102, 126, 234, 0.6);
+        z-index: 10;
+      }
+
+      @keyframes iconPulse {
+        0%,
+        100% {
+          transform: translateX(-50%) scale(1);
+        }
+        50% {
+          transform: translateX(-50%) scale(1.15);
+        }
+      }
+
+      .timeline-content h3 {
+        font-size: 26px;
+        margin-bottom: 15px;
+        background: linear-gradient(135deg, #667eea 0%, #f093fb 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .timeline-content p {
+        color: #a0a0a0;
+        line-height: 1.8;
+        font-size: 16px;
+      }
+
+      /* FAQ Accordion */
+      .faq {
+        padding: 120px 50px;
+        max-width: 900px;
+        margin: 0 auto;
+      }
+
+      .faq-item {
+        background: rgba(255, 255, 255, 0.03);
+        backdrop-filter: blur(15px);
+        border-radius: 20px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        margin-bottom: 20px;
+        overflow: hidden;
+        transition: all 0.4s;
+      }
+
+      .faq-item:hover {
+        border-color: rgba(102, 126, 234, 0.3);
+        box-shadow: 0 10px 40px rgba(138, 43, 226, 0.2);
+      }
+
+      .faq-question {
+        padding: 30px;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transition: all 0.3s;
+      }
+
+      .faq-question:hover {
+        background: rgba(255, 255, 255, 0.05);
+      }
+
+      .faq-question h3 {
+        font-size: 20px;
+        color: #fff;
+      }
+
+      .faq-question::after {
+        content: "+";
+        font-size: 32px;
+        color: #667eea;
+        transition: transform 0.3s;
+      }
+
+      .faq-answer {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s, padding 0.4s;
+        color: #a0a0a0;
+        line-height: 1.8;
+      }
+
+      .faq-item.active .faq-question::after {
+        transform: rotate(45deg);
+      }
+
+      .faq-item.active .faq-answer {
+        max-height: 500px;
+        padding: 0 30px 30px 30px;
+      }
+
+      /* Newsletter Section */
+      .newsletter {
+        padding: 100px 50px;
+        max-width: 800px;
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      .newsletter h2 {
+        font-size: 48px;
+        margin-bottom: 25px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .newsletter p {
+        font-size: 20px;
+        color: #a0a0a0;
+        margin-bottom: 40px;
+      }
+
+      .newsletter-form {
+        display: flex;
+        gap: 15px;
+        max-width: 600px;
+        margin: 0 auto;
+      }
+
+      .newsletter-input {
+        flex: 1;
+        padding: 20px 30px;
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 50px;
+        color: #fff;
+        font-size: 16px;
+        transition: all 0.3s;
+      }
+
+      .newsletter-input:focus {
+        outline: none;
+        border-color: #667eea;
+        box-shadow: 0 0 30px rgba(102, 126, 234, 0.3);
+      }
+
+      .newsletter-input::placeholder {
+        color: #666;
+      }
+
+      .newsletter-btn {
+        padding: 20px 45px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: #fff;
+        border: none;
+        border-radius: 50px;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 0.4s;
+        box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+      }
+
+      .newsletter-btn:hover {
+        transform: scale(1.05);
+        box-shadow: 0 15px 40px rgba(102, 126, 234, 0.6);
+      }
+
+      /* CTA Section */
+      .cta-section {
+        padding: 180px 50px;
+        text-align: center;
+        background: linear-gradient(
+          135deg,
+          rgba(102, 126, 234, 0.15) 0%,
+          rgba(118, 75, 162, 0.15) 100%
+        );
+        margin: 100px 50px;
+        border-radius: 40px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .cta-section::before {
+        content: "";
+        position: absolute;
+        width: 400px;
+        height: 400px;
+        background: radial-gradient(
+          circle,
+          rgba(102, 126, 234, 0.2) 0%,
+          transparent 70%
+        );
+        border-radius: 50%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        animation: ctaGlow 6s ease-in-out infinite;
+      }
+
+      @keyframes ctaGlow {
+        0%,
+        100% {
+          transform: translate(-50%, -50%) scale(1);
+          opacity: 0.5;
+        }
+        50% {
+          transform: translate(-50%, -50%) scale(1.5);
+          opacity: 0.8;
+        }
+      }
+
+      .cta-section h2 {
+        font-size: 64px;
+        margin-bottom: 35px;
+        background: linear-gradient(
+          135deg,
+          #667eea 0%,
+          #764ba2 50%,
+          #f093fb 100%
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        position: relative;
+        z-index: 1;
+        animation: ctaTitleFloat 4s ease-in-out infinite;
+      }
+
+      @keyframes ctaTitleFloat {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-15px);
+        }
+      }
+
+      .cta-section p {
+        font-size: 24px;
+        color: #b0b0b0;
+        margin-bottom: 50px;
+        position: relative;
+        z-index: 1;
+      }
+
+      /* Footer */
+      footer {
+        padding: 100px 50px 50px;
+        background: rgba(0, 0, 0, 0.6);
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        position: relative;
+      }
+
+      .footer-content {
+        max-width: 1300px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 50px;
+        margin-bottom: 50px;
+      }
+
+      .footer-column h3 {
+        margin-bottom: 25px;
+        font-size: 22px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .footer-column ul {
+        list-style: none;
+      }
+
+      .footer-column ul li {
+        margin-bottom: 15px;
+      }
+
+      .footer-column ul li a {
+        color: #a0a0a0;
+        text-decoration: none;
+        transition: all 0.3s;
+        display: inline-block;
+      }
+
+      .footer-column ul li a:hover {
+        color: #667eea;
+        padding-left: 10px;
+        transform: translateX(5px);
+      }
+
+      .social-links {
+        display: flex;
+        gap: 15px;
+        margin-top: 20px;
+      }
+
+      .social-link {
+        width: 45px;
+        height: 45px;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 20px;
+        transition: all 0.4s;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      .social-link:hover {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        transform: translateY(-5px) rotate(360deg);
+        box-shadow: 0 10px 30px rgba(102, 126, 234, 0.5);
+      }
+
+      .footer-bottom {
+        text-align: center;
+        padding-top: 50px;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        color: #666;
+        font-size: 15px;
+      }
+
+      /* Scroll Progress Bar */
+      .scroll-progress {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 0%;
+        height: 4px;
+        background: linear-gradient(
+          90deg,
+          #667eea 0%,
+          #764ba2 50%,
+          #f093fb 100%
+        );
+        z-index: 1000;
+        transition: width 0.1s;
+        box-shadow: 0 0 20px rgba(102, 126, 234, 0.8);
+      }
+
+      /* Pulse Button */
+      .pulse-btn {
+        position: fixed;
+        bottom: 40px;
+        right: 40px;
+        width: 65px;
+        height: 65px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        animation: pulse 2s infinite;
+        box-shadow: 0 0 0 0 rgba(102, 126, 234, 0.7);
+        z-index: 1000;
+        transition: all 0.3s;
+      }
+
+      .pulse-btn:hover {
+        transform: scale(1.15);
+      }
+
+      @keyframes pulse {
+        0% {
+          box-shadow: 0 0 0 0 rgba(102, 126, 234, 0.7);
+        }
+        70% {
+          box-shadow: 0 0 0 25px rgba(102, 126, 234, 0);
+        }
+        100% {
+          box-shadow: 0 0 0 0 rgba(102, 126, 234, 0);
+        }
+      }
+
+      .pulse-btn::before {
+        content: "↑";
+        font-size: 28px;
+        color: #fff;
+        font-weight: bold;
+      }
+
+      /* Social Float Buttons */
+      .social-float {
+        position: fixed;
+        bottom: 40px;
+        left: 40px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        z-index: 1000;
+      }
+
+      .float-btn {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        font-size: 28px;
+        box-shadow: 0 5px 25px rgba(0, 0, 0, 0.3);
+        transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        animation: floatBounce 3s ease-in-out infinite;
+      }
+
+      .float-btn:nth-child(1) {
+        animation-delay: 0s;
+      }
+      .float-btn:nth-child(2) {
+        animation-delay: 0.3s;
+      }
+
+      @keyframes floatBounce {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-10px);
+        }
+      }
+
+      .float-btn:hover {
+        transform: scale(1.2) rotate(360deg);
+      }
+
+      .zalo-btn {
+        background: linear-gradient(135deg, #0068ff 0%, #0084ff 100%);
+      }
+
+      .zalo-btn:hover {
+        box-shadow: 0 10px 40px rgba(0, 104, 255, 0.6);
+      }
+
+      .facebook-btn {
+        background: linear-gradient(135deg, #1877f2 0%, #42b0ff 100%);
+      }
+
+      .facebook-btn:hover {
+        box-shadow: 0 10px 40px rgba(24, 119, 242, 0.6);
+      }
+
+      /* Newsletter Form Enhanced */
+      .newsletter-form {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        max-width: 600px;
+        margin: 0 auto;
+      }
+
+      .form-row {
+        display: flex;
+        gap: 15px;
+      }
+
+      .form-row .newsletter-input {
+        flex: 1;
+      }
+
+      .newsletter-input,
+      .newsletter-textarea {
+        padding: 20px 30px;
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 15px;
+        color: #fff;
+        font-size: 16px;
+        transition: all 0.3s;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      .newsletter-textarea {
+        width: 100%;
+        min-height: 120px;
+        resize: vertical;
+      }
+
+      .newsletter-input:focus,
+      .newsletter-textarea:focus {
+        outline: none;
+        border-color: #667eea;
+        box-shadow: 0 0 30px rgba(102, 126, 234, 0.3);
+        background: rgba(255, 255, 255, 0.08);
+      }
+
+      .newsletter-input::placeholder,
+      .newsletter-textarea::placeholder {
+        color: #666;
+      }
+
+      .newsletter-btn {
+        padding: 20px 45px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: #fff;
+        border: none;
+        border-radius: 15px;
+        font-size: 18px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 0.4s;
+        box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+      }
+
+      .newsletter-btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 15px 40px rgba(102, 126, 234, 0.6);
+      }
+
+      /* Responsive */
+      @media (max-width: 768px) {
+        .hero h1 {
+          font-size: 48px;
+        }
+
+        .hero p {
+          font-size: 20px;
+        }
+
+        header {
+          padding: 20px;
+        }
+
+        nav a {
+          margin: 0 10px;
+          font-size: 14px;
+        }
+
+        .section-title {
+          font-size: 40px;
+        }
+
+        .cta-section h2 {
+          font-size: 42px;
+        }
+
+        .timeline::before {
+          left: 30px;
+        }
+
+        .timeline-item {
+          flex-direction: column !important;
+        }
+
+        .timeline-item:nth-child(odd) .timeline-content,
+        .timeline-item:nth-child(even) .timeline-content {
+          margin: 0 0 0 80px;
+          padding: 30px;
+        }
+
+        .timeline-icon {
+          left: 30px;
+        }
+
+        .form-row {
+          flex-direction: column;
+        }
+
+        .rotating-cards {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .social-float {
+          left: 20px;
+          bottom: 120px;
+        }
+
+        .pulse-btn {
+          right: 20px;
+          bottom: 40px;
+        }
+      }
+    </style>
   </head>
   <body>
-    <!-- Header -->
-    <!-- Thay thế phần Header trong HTML -->
-    <header class="header">
-      <nav class="navbar">
-        <div class="container">
-          <div class="logo">WebPro</div>
+    <div class="scroll-progress" id="scrollProgress"></div>
+    <div class="animated-bg"></div>
 
-          <!-- Hamburger Menu Button -->
-          <div class="hamburger" id="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
+    <div class="particles">
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+    </div>
 
-          <!-- Navigation Menu -->
-          <ul class="nav-menu" id="navMenu">
-            <li><a href="#home" class="nav-link">Trang chủ</a></li>
-            <li><a href="#services" class="nav-link">Dịch vụ</a></li>
-            <li><a href="#portfolio" class="nav-link">Mẫu website</a></li>
-            <li><a href="#pricing" class="nav-link">Bảng giá</a></li>
-            <li><a href="#contact" class="nav-link">Liên hệ</a></li>
-          </ul>
-        </div>
+    <header>
+      <div class="logo">NexGen</div>
+      <nav>
+        <a href="#features">Tính năng</a>
+        <a href="#pricing">Giá cả</a>
+        <a href="#team">Đội ngũ</a>
+        <a href="#newsletter">Liên hệ</a>
       </nav>
-
-      <!-- Overlay -->
-      <div class="nav-overlay" id="navOverlay"></div>
     </header>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-      <div class="container">
-        <div class="hero-content">
-          <h1 class="hero-title">Thiết Kế Website Chuyên Nghiệp</h1>
-          <p class="hero-subtitle">
-            Chúng tôi tạo ra những website đẹp mắt, hiện đại và tối ưu cho doanh
-            nghiệp của bạn
-          </p>
-          <div class="hero-buttons">
-            <a href="#portfolio" class="btn btn-primary">Xem mẫu website</a>
-            <a href="#contact" class="btn btn-secondary">Liên hệ ngay</a>
-          </div>
+    <section class="hero">
+      <h1>Tương Lai Trong Tầm Tay</h1>
+      <p>Trải nghiệm công nghệ thế hệ mới với animation đỉnh cao</p>
+      <a href="#" class="cta-button">Khám Phá Ngay</a>
+
+      <div class="rotating-cards">
+        <div class="rotating-card">
+          <h3>✨ Siêu Mượt Mà</h3>
+          <p>Animation 60fps, mượt như lụa</p>
+        </div>
+        <div class="rotating-card">
+          <h3>🎯 Chuẩn Xác</h3>
+          <p>Hiệu ứng tối ưu hoàn hảo</p>
+        </div>
+        <div class="rotating-card">
+          <h3>💫 Ấn Tượng</h3>
+          <p>Thu hút mọi ánh nhìn</p>
         </div>
       </div>
     </section>
 
-    <!-- Services Section -->
-    <section id="services" class="services">
-      <div class="container">
-        <h2 class="section-title">Dịch Vụ Của Chúng Tôi</h2>
-        <div class="services-grid">
-          <div class="service-card">
-            <div class="service-icon">🎨</div>
-            <h3>Thiết Kế UI/UX</h3>
-            <p>Giao diện đẹp mắt, trải nghiệm người dùng tối ưu</p>
-          </div>
-          <div class="service-card">
-            <div class="service-icon">💻</div>
-            <h3>Phát Triển Web</h3>
-            <p>Code chuẩn, tối ưu hiệu suất và bảo mật</p>
-          </div>
-          <div class="service-card">
-            <div class="service-icon">📱</div>
-            <h3>Responsive Design</h3>
-            <p>Hiển thị hoàn hảo trên mọi thiết bị</p>
-          </div>
-          <div class="service-card">
-            <div class="service-icon">🚀</div>
-            <h3>SEO Optimization</h3>
-            <p>Tối ưu hóa để website dễ tìm kiếm</p>
-          </div>
-        </div>
+    <div class="wave-divider">
+      <div class="wave"></div>
+      <div class="wave"></div>
+    </div>
+
+    <section class="stats">
+      <div class="stat-card">
+        <div class="stat-number">1M+</div>
+        <div class="stat-label">Người dùng</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">99%</div>
+        <div class="stat-label">Hài lòng</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">500K+</div>
+        <div class="stat-label">Dự án</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">24/7</div>
+        <div class="stat-label">Hỗ trợ</div>
       </div>
     </section>
 
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="portfolio">
-      <div class="container">
-        <h2 class="section-title">Mẫu Website Của Chúng Tôi</h2>
-        <p class="section-subtitle">
-          Khám phá các mẫu website đẹp và chuyên nghiệp
-        </p>
-        <div class="portfolio-grid">
-          <div class="portfolio-card">
-            <div class="portfolio-image">
-              <div
-                class="portfolio-placeholder"
-                style="
-                  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-                "
-              >
-                <span>E-Commerce</span>
-              </div>
-            </div>
-            <div class="portfolio-content">
-              <h3>Website Thương Mại Điện Tử</h3>
-              <p>
-                Giải pháp bán hàng online toàn diện với giỏ hàng, thanh toán
-              </p>
-              <a href="#" class="portfolio-link">Xem chi tiết →</a>
-            </div>
-          </div>
-
-          <div class="portfolio-card">
-            <div class="portfolio-image">
-              <div
-                class="portfolio-placeholder"
-                style="
-                  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-                "
-              >
-                <span>Corporate</span>
-              </div>
-            </div>
-            <div class="portfolio-content">
-              <h3>Website Doanh Nghiệp</h3>
-              <p>
-                Giao diện chuyên nghiệp, thể hiện uy tín và đẳng cấp công ty
-              </p>
-              <a href="#" class="portfolio-link">Xem chi tiết →</a>
-            </div>
-          </div>
-
-          <div class="portfolio-card">
-            <div class="portfolio-image">
-              <div
-                class="portfolio-placeholder"
-                style="
-                  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
-                "
-              >
-                <span>Portfolio</span>
-              </div>
-            </div>
-            <div class="portfolio-content">
-              <h3>Website Portfolio Cá Nhân</h3>
-              <p>Showcase công việc và kỹ năng của bạn một cách ấn tượng</p>
-              <a href="#" class="portfolio-link">Xem chi tiết →</a>
-            </div>
-          </div>
-
-          <div class="portfolio-card">
-            <div class="portfolio-image">
-              <div
-                class="portfolio-placeholder"
-                style="
-                  background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
-                "
-              >
-                <span>Restaurant</span>
-              </div>
-            </div>
-            <div class="portfolio-content">
-              <h3>Website Nhà Hàng</h3>
-              <p>Thiết kế bắt mắt với menu, đặt bàn trực tuyến</p>
-              <a href="#" class="portfolio-link">Xem chi tiết →</a>
-            </div>
-          </div>
-
-          <div class="portfolio-card">
-            <div class="portfolio-image">
-              <div
-                class="portfolio-placeholder"
-                style="
-                  background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
-                "
-              >
-                <span>Blog</span>
-              </div>
-            </div>
-            <div class="portfolio-content">
-              <h3>Website Blog/Tin Tức</h3>
-              <p>Nền tảng chia sẻ nội dung với giao diện thân thiện</p>
-              <a href="#" class="portfolio-link">Xem chi tiết →</a>
-            </div>
-          </div>
-
-          <div class="portfolio-card">
-            <div class="portfolio-image">
-              <div
-                class="portfolio-placeholder"
-                style="
-                  background: linear-gradient(135deg, #30cfd0 0%, #330867 100%);
-                "
-              >
-                <span>Landing Page</span>
-              </div>
-            </div>
-            <div class="portfolio-content">
-              <h3>Landing Page Marketing</h3>
-              <p>Tối ưu chuyển đổi, thu hút khách hàng tiềm năng</p>
-              <a href="#" class="portfolio-link">Xem chi tiết →</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Pricing Section -->
-    <section id="pricing" class="pricing">
-      <div class="container">
-        <h2 class="section-title">Bảng Giá Dịch Vụ</h2>
-        <p class="section-subtitle">
-          Chọn gói dịch vụ phù hợp với nhu cầu và ngân sách của bạn
-        </p>
-        <div class="pricing-grid">
-          <!-- Gói Landing Page -->
-          <div class="pricing-card">
-            <div class="pricing-header">
-              <h3>Landing Page</h3>
-              <div class="pricing-icon">📄</div>
-            </div>
-            <div class="price">
-              <span class="price-amount">500,000</span>
-              <span class="price-currency">VNĐ</span>
-            </div>
-            <ul class="pricing-features">
-              <li>✓ Thiết kế 1 trang đẹp mắt</li>
-              <li>✓ Responsive trên mọi thiết bị</li>
-              <li>✓ Tốc độ tải trang nhanh</li>
-              <li>✓ Form liên hệ cơ bản</li>
-              <li>✓ SEO cơ bản</li>
-              <li>✓ Thời gian hoàn thành: 3-5 ngày</li>
-              <li class="feature-disabled">✗ Quản trị nội dung</li>
-              <li class="feature-disabled">✗ Nhiều trang</li>
-            </ul>
-            <a href="#contact" class="btn btn-outline">Chọn gói này</a>
-          </div>
-
-          <!-- Gói Startup -->
-          <div class="pricing-card">
-            <div class="pricing-header">
-              <h3>Gói Startup</h3>
-              <div class="pricing-icon">🚀</div>
-            </div>
-            <div class="price">
-              <span class="price-amount">2,900,000</span>
-              <span class="price-currency">VNĐ</span>
-            </div>
-            <ul class="pricing-features">
-              <li>✓ Thiết kế 3-5 trang</li>
-              <li>✓ Responsive trên mọi thiết bị</li>
-              <li>✓ Tốc độ tải trang tối ưu</li>
-              <li>✓ Form liên hệ</li>
-              <li>✓ Tích hợp Google Maps</li>
-              <li>✓ SEO cơ bản</li>
-              <li>✓ Bảo hành 12 tháng</li>
-              <li class="feature-disabled">✗ Quản trị nội dung</li>
-            </ul>
-            <a href="#contact" class="btn btn-outline">Chọn gói này</a>
-          </div>
-
-          <!-- Gói Business -->
-          <div class="pricing-card pricing-card-popular">
-            <div class="popular-badge">Phổ biến nhất</div>
-            <div class="pricing-header">
-              <h3>Gói Business</h3>
-              <div class="pricing-icon">💼</div>
-            </div>
-            <div class="price">
-              <span class="price-amount">4,900,000</span>
-              <span class="price-currency">VNĐ</span>
-            </div>
-            <ul class="pricing-features">
-              <li>✓ Thiết kế 7-10 trang</li>
-              <li>✓ Responsive trên mọi thiết bị</li>
-              <li>✓ Hệ thống quản trị nội dung</li>
-              <li>✓ Form liên hệ nâng cao</li>
-              <li>✓ Tích hợp Google Maps & Analytics</li>
-              <li>✓ SEO chuyên sâu</li>
-              <li>✓ Live chat</li>
-              <li>✓ Bảo hành 12 tháng</li>
-            </ul>
-            <a href="#contact" class="btn btn-primary">Chọn gói này</a>
-          </div>
-
-          <!-- Gói Professional -->
-          <div class="pricing-card">
-            <div class="pricing-header">
-              <h3>Gói Professional</h3>
-              <div class="pricing-icon">⭐</div>
-            </div>
-            <div class="price">
-              <span class="price-amount">6,900,000</span>
-              <span class="price-currency">VNĐ</span>
-            </div>
-            <ul class="pricing-features">
-              <li>✓ Thiết kế 12-15 trang</li>
-              <li>✓ Responsive cao cấp</li>
-              <li>✓ Hệ thống quản trị CMS nâng cao</li>
-              <li>✓ Tích hợp thanh toán online</li>
-              <li>✓ Google Maps & Analytics</li>
-              <li>✓ SEO chuyên nghiệp</li>
-              <li>✓ Live chat & Email marketing</li>
-              <li>✓ Bảo hành 12 tháng</li>
-            </ul>
-            <a href="#contact" class="btn btn-outline">Chọn gói này</a>
-          </div>
-
-          <!-- Gói E-Commerce -->
-          <div class="pricing-card">
-            <div class="pricing-header">
-              <h3>Gói E-Commerce</h3>
-              <div class="pricing-icon">🛒</div>
-            </div>
-            <div class="price">
-              <span class="price-amount">9,900,000</span>
-              <span class="price-currency">VNĐ</span>
-            </div>
-            <ul class="pricing-features">
-              <li>✓ Thiết kế không giới hạn trang</li>
-              <li>✓ Hệ thống bán hàng đầy đủ</li>
-              <li>✓ Giỏ hàng & thanh toán online</li>
-              <li>✓ Quản lý sản phẩm & đơn hàng</li>
-              <li>✓ Quản lý khách hàng (CRM)</li>
-              <li>✓ SEO chuyên nghiệp</li>
-              <li>✓ Email marketing tự động</li>
-              <li>✓ Bảo hành 24 tháng</li>
-            </ul>
-            <a href="#contact" class="btn btn-outline">Chọn gói này</a>
-          </div>
-
-          <!-- Gói Enterprise -->
-          <div class="pricing-card">
-            <div class="pricing-header">
-              <h3>Gói Enterprise</h3>
-              <div class="pricing-icon">💎</div>
-            </div>
-            <div class="price">
-              <span class="price-amount">12,900,000</span>
-              <span class="price-currency">VNĐ+</span>
-            </div>
-            <ul class="pricing-features">
-              <li>✓ Giải pháp tùy chỉnh hoàn toàn</li>
-              <li>✓ Thiết kế độc quyền cao cấp</li>
-              <li>✓ Hệ thống phức tạp & tích hợp API</li>
-              <li>✓ Chatbot AI & tự động hóa</li>
-              <li>✓ Bảo mật nâng cao SSL</li>
-              <li>✓ Đào tạo đội ngũ chuyên sâu</li>
-              <li>✓ Hỗ trợ ưu tiên 24/7</li>
-              <li>✓ Bảo hành 36 tháng</li>
-            </ul>
-            <a href="#contact" class="btn btn-outline">Chọn gói này</a>
-          </div>
-        </div>
-
-        <!-- Additional Info -->
-        <div class="pricing-note">
-          <p>
-            💡 <strong>Lưu ý:</strong> Tất cả các gói từ 2.9 triệu trở lên đều
-            bao gồm đào tạo sử dụng miễn phí và hỗ trợ kỹ thuật. Có thể tùy
-            chỉnh thêm tính năng theo yêu cầu.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-      <div class="container">
-        <h2 class="section-title">Liên Hệ Với Chúng Tôi</h2>
-        <p class="section-subtitle">
-          Hãy để chúng tôi biến ý tưởng của bạn thành hiện thực
-        </p>
-        <div class="contact-content">
-          <div class="contact-info">
-            <div class="contact-item">
-              <div class="contact-icon">📧</div>
-              <div>
-                <h4>Email</h4>
-                <p>contact@webpro.vn</p>
-              </div>
-            </div>
-            <div class="contact-item">
-              <div class="contact-icon">📞</div>
-              <div>
-                <h4>Điện thoại</h4>
-                <p>0123 456 789</p>
-              </div>
-            </div>
-            <div class="contact-item">
-              <div class="contact-icon">📍</div>
-              <div>
-                <h4>Địa chỉ</h4>
-                <p>Hồ Chí Minh, Việt Nam</p>
-              </div>
-            </div>
-          </div>
-          <div class="contact-form">
-            <input type="text" placeholder="Họ và tên" class="form-input" />
-            <input type="email" placeholder="Email" class="form-input" />
-            <input type="text" placeholder="Số điện thoại" class="form-input" />
-            <textarea
-              placeholder="Nội dung tin nhắn"
-              class="form-textarea"
-            ></textarea>
-            <button class="btn btn-primary btn-full">Gửi tin nhắn</button>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-      <div class="container">
+    <section class="features" id="features">
+      <div class="feature-card">
+        <div class="feature-icon">🚀</div>
+        <h3>Tốc Độ Ánh Sáng</h3>
         <p>
-          &copy; 2024 WebPro. Thiết kế website chuyên nghiệp - Tất cả quyền được
-          bảo lưu.
+          Hiệu suất vượt trội với animation được tối ưu hóa, load nhanh chóng
+          như chớp
         </p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">💎</div>
+        <h3>Design Sang Trọng</h3>
+        <p>
+          Giao diện hiện đại với glassmorphism và gradient đỉnh cao, thu hút mọi
+          ánh nhìn
+        </p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">🎨</div>
+        <h3>Màu Sắc Rực Rỡ</h3>
+        <p>
+          Bảng màu gradient chuyên nghiệp, tạo điểm nhấn hoàn hảo cho nội dung
+          của bạn
+        </p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">⚡</div>
+        <h3>Hiệu Suất Cao</h3>
+        <p>
+          Tối ưu hóa tối đa để mang lại trải nghiệm mượt mà nhất cho người dùng
+        </p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">🔒</div>
+        <h3>Bảo Mật Tuyệt Đối</h3>
+        <p>Hệ thống bảo mật đa lớp, đảm bảo an toàn cho dữ liệu của bạn</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">🌐</div>
+        <h3>Đa Nền Tảng</h3>
+        <p>Hoạt động mượt mà trên mọi thiết bị và trình duyệt hiện đại</p>
+      </div>
+    </section>
+
+    <section class="parallax-section">
+      <div class="parallax-bg"></div>
+      <div class="parallax-content">
+        <h2>Công Nghệ Đột Phá</h2>
+        <p>Nâng tầm trải nghiệm số của bạn</p>
+      </div>
+    </section>
+
+    <section class="testimonials">
+      <h2 class="section-title">Khách Hàng Nói Gì</h2>
+      <div class="testimonial-grid">
+        <div class="testimonial-card">
+          <p class="testimonial-text">
+            Sản phẩm tuyệt vời! Animation mượt mà, giao diện đẹp. Tôi đã giới
+            thiệu cho rất nhiều bạn bè sử dụng.
+          </p>
+          <div class="testimonial-author">
+            <div class="author-avatar">👨</div>
+            <div class="author-info">
+              <h4>Nguyễn Văn A</h4>
+              <p>CEO - Tech Corp</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <p class="testimonial-text">
+            Chưa bao giờ tôi thấy một trang web nào có animation đẹp và mượt mà
+            như vậy. Đúng là đáng đồng tiền bát gạo!
+          </p>
+          <div class="testimonial-author">
+            <div class="author-avatar">👩</div>
+            <div class="author-info">
+              <h4>Trần Thị B</h4>
+              <p>Designer - Creative Agency</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <p class="testimonial-text">
+            Đội ngũ hỗ trợ nhiệt tình, sản phẩm chất lượng. Tôi rất hài lòng và
+            sẽ tiếp tục sử dụng lâu dài.
+          </p>
+          <div class="testimonial-author">
+            <div class="author-avatar">👨</div>
+            <div class="author-info">
+              <h4>Lê Văn C</h4>
+              <p>Developer - StartUp XYZ</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="pricing" id="pricing">
+      <h2 class="section-title">Bảng Giá Linh Hoạt</h2>
+      <div class="pricing-grid">
+        <div class="pricing-card">
+          <h3 class="plan-name">Khởi Đầu</h3>
+          <div class="plan-price">299K</div>
+          <p class="plan-period">/ tháng</p>
+          <ul class="plan-features">
+            <li>5 Dự án</li>
+            <li>2GB Lưu trữ</li>
+            <li>Hỗ trợ Email</li>
+            <li>Thống kê cơ bản</li>
+          </ul>
+          <a href="#" class="cta-button">Chọn Gói</a>
+        </div>
+
+        <div class="pricing-card">
+          <h3 class="plan-name">Cơ Bản</h3>
+          <div class="plan-price">599K</div>
+          <p class="plan-period">/ tháng</p>
+          <ul class="plan-features">
+            <li>10 Dự án</li>
+            <li>5GB Lưu trữ</li>
+            <li>Hỗ trợ Email</li>
+            <li>Thống kê cơ bản</li>
+            <li>Chứng chỉ SSL</li>
+          </ul>
+          <a href="#" class="cta-button">Chọn Gói</a>
+        </div>
+
+        <div class="pricing-card">
+          <h3 class="plan-name">Tiêu Chuẩn</h3>
+          <div class="plan-price">999K</div>
+          <p class="plan-period">/ tháng</p>
+          <ul class="plan-features">
+            <li>25 Dự án</li>
+            <li>10GB Lưu trữ</li>
+            <li>Hỗ trợ ưu tiên</li>
+            <li>Thống kê nâng cao</li>
+            <li>Tên miền riêng</li>
+          </ul>
+          <a href="#" class="cta-button">Chọn Gói</a>
+        </div>
+
+        <div class="pricing-card">
+          <h3 class="plan-name">Nâng Cao</h3>
+          <div class="plan-price">1.99M</div>
+          <p class="plan-period">/ tháng</p>
+          <ul class="plan-features">
+            <li>50 Dự án</li>
+            <li>25GB Lưu trữ</li>
+            <li>Hỗ trợ ưu tiên</li>
+            <li>Thống kê nâng cao</li>
+            <li>Tên miền riêng</li>
+            <li>Công cụ SEO</li>
+          </ul>
+          <a href="#" class="cta-button">Chọn Gói</a>
+        </div>
+
+        <div class="pricing-card featured">
+          <span class="plan-badge">PHỔ BIẾN</span>
+          <h3 class="plan-name">Chuyên Nghiệp</h3>
+          <div class="plan-price">3.99M</div>
+          <p class="plan-period">/ tháng</p>
+          <ul class="plan-features">
+            <li>100 Dự án</li>
+            <li>50GB Lưu trữ</li>
+            <li>Hỗ trợ 24/7</li>
+            <li>Thống kê toàn diện</li>
+            <li>Truy cập API</li>
+            <li>Nhãn trắng</li>
+            <li>Công cụ Marketing</li>
+          </ul>
+          <a href="#" class="cta-button">Chọn Gói</a>
+        </div>
+
+        <div class="pricing-card">
+          <h3 class="plan-name">Cao Cấp</h3>
+          <div class="plan-price">5.99M</div>
+          <p class="plan-period">/ tháng</p>
+          <ul class="plan-features">
+            <li>200 Dự án</li>
+            <li>100GB Lưu trữ</li>
+            <li>Hỗ trợ ưu tiên 24/7</li>
+            <li>Thống kê toàn diện</li>
+            <li>Truy cập API</li>
+            <li>Nhãn trắng</li>
+            <li>Bảo mật nâng cao</li>
+            <li>Cộng tác nhóm</li>
+          </ul>
+          <a href="#" class="cta-button">Chọn Gói</a>
+        </div>
+
+        <div class="pricing-card">
+          <h3 class="plan-name">Doanh Nghiệp</h3>
+          <div class="plan-price">7.99M</div>
+          <p class="plan-period">/ tháng</p>
+          <ul class="plan-features">
+            <li>500 Dự án</li>
+            <li>250GB Lưu trữ</li>
+            <li>Hỗ trợ riêng 24/7</li>
+            <li>Thống kê doanh nghiệp</li>
+            <li>API toàn quyền</li>
+            <li>Nhãn trắng Pro</li>
+            <li>Bảo mật nâng cao</li>
+            <li>Nhiều nhóm làm việc</li>
+            <li>Tích hợp tùy chỉnh</li>
+          </ul>
+          <a href="#" class="cta-button">Chọn Gói</a>
+        </div>
+
+        <div class="pricing-card">
+          <h3 class="plan-name">Tập Đoàn</h3>
+          <div class="plan-price">9.99M</div>
+          <p class="plan-period">/ tháng</p>
+          <ul class="plan-features">
+            <li>Không giới hạn dự án</li>
+            <li>500GB Lưu trữ</li>
+            <li>Hỗ trợ VIP 24/7</li>
+            <li>Thống kê doanh nghiệp</li>
+            <li>API toàn quyền</li>
+            <li>Nhãn trắng Enterprise</li>
+            <li>Bảo mật tối đa</li>
+            <li>Không giới hạn nhóm</li>
+            <li>Phát triển tùy chỉnh</li>
+            <li>Quản lý riêng</li>
+          </ul>
+          <a href="#" class="cta-button">Chọn Gói</a>
+        </div>
+
+        <div class="pricing-card">
+          <h3 class="plan-name">Đỉnh Cao</h3>
+          <div class="plan-price">12.9M</div>
+          <p class="plan-period">/ tháng</p>
+          <ul class="plan-features">
+            <li>Không giới hạn mọi thứ</li>
+            <li>1TB Lưu trữ</li>
+            <li>Hỗ trợ Concierge 24/7</li>
+            <li>Thống kê tùy chỉnh</li>
+            <li>API không giới hạn</li>
+            <li>Nhãn trắng hoàn toàn</li>
+            <li>Bảo mật doanh nghiệp+</li>
+            <li>Truy cập toàn cầu</li>
+            <li>Phát triển ưu tiên</li>
+            <li>Đội ngũ riêng</li>
+            <li>Đào tạo tại chỗ</li>
+          </ul>
+          <a href="#" class="cta-button">Chọn Gói</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="gallery">
+      <h2 class="section-title">Thư Viện Dự Án</h2>
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <div class="gallery-overlay">
+            <h4>Dự Án Mobile App</h4>
+            <p>UI/UX Design</p>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <div class="gallery-overlay">
+            <h4>Website E-commerce</h4>
+            <p>Full Stack Development</p>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <div class="gallery-overlay">
+            <h4>Landing Page</h4>
+            <p>Creative Design</p>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <div class="gallery-overlay">
+            <h4>Dashboard Analytics</h4>
+            <p>Data Visualization</p>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <div class="gallery-overlay">
+            <h4>Social Network</h4>
+            <p>Platform Development</p>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <div class="gallery-overlay">
+            <h4>Gaming Portal</h4>
+            <p>Interactive Design</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="team" id="team">
+      <h2 class="section-title">Đội Ngũ Chuyên Nghiệp</h2>
+      <div class="team-grid">
+        <div class="team-card">
+          <div class="team-avatar">👨‍💼</div>
+          <h3 class="team-name">Nguyễn Minh A</h3>
+          <p class="team-role">CEO & Founder</p>
+          <p class="team-desc">
+            10+ năm kinh nghiệm trong lĩnh vực công nghệ và quản lý dự án
+          </p>
+        </div>
+
+        <div class="team-card">
+          <div class="team-avatar">👩‍💻</div>
+          <h3 class="team-name">Trần Thị B</h3>
+          <p class="team-role">Lead Designer</p>
+          <p class="team-desc">
+            Chuyên gia UI/UX với nhiều giải thượng quốc tế về design
+          </p>
+        </div>
+
+        <div class="team-card">
+          <div class="team-avatar">👨‍💻</div>
+          <h3 class="team-name">Lê Văn C</h3>
+          <p class="team-role">Tech Lead</p>
+          <p class="team-desc">
+            Full-stack developer với kinh nghiệm xây dựng hệ thống lớn
+          </p>
+        </div>
+
+        <div class="team-card">
+          <div class="team-avatar">👩‍🎨</div>
+          <h3 class="team-name">Phạm Thị D</h3>
+          <p class="team-role">Creative Director</p>
+          <p class="team-desc">
+            Đam mê sáng tạo và tạo ra những trải nghiệm độc đáo
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="process">
+      <h2 class="section-title">Quy Trình Làm Việc</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-icon">📋</div>
+          <div class="timeline-content">
+            <h3>1. Tư Vấn & Phân Tích</h3>
+            <p>
+              Lắng nghe nhu cầu của bạn, phân tích yêu cầu và đưa ra giải pháp
+              tối ưu nhất cho dự án
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-icon">🎨</div>
+          <div class="timeline-content">
+            <h3>2. Thiết Kế Sáng Tạo</h3>
+            <p>
+              Tạo ra các mockup và prototype với design hiện đại, thu hút và phù
+              hợp với thương hiệu
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-icon">⚙️</div>
+          <div class="timeline-content">
+            <h3>3. Phát Triển & Code</h3>
+            <p>
+              Chuyển design thành sản phẩm thực tế với code chất lượng cao và
+              tối ưu hiệu suất
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-icon">🚀</div>
+          <div class="timeline-content">
+            <h3>4. Ra Mắt & Hỗ Trợ</h3>
+            <p>
+              Deploy sản phẩm lên production và cung cấp hỗ trợ kỹ thuật liên
+              tục cho bạn
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq">
+      <h2 class="section-title">Câu Hỏi Thường Gặp</h2>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <h3>Thời gian hoàn thành dự án là bao lâu?</h3>
+        </div>
+        <div class="faq-answer">
+          <p>
+            Thời gian hoàn thành phụ thuộc vào quy mô dự án. Thông thường một
+            landing page đơn giản mất 1-2 tuần, trong khi các dự án lớn hơn có
+            thể mất 1-3 tháng.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <h3>Chi phí cho một dự án như thế nào?</h3>
+        </div>
+        <div class="faq-answer">
+          <p>
+            Chi phí được tính dựa trên độ phức tạp, tính năng và thời gian phát
+            triển. Chúng tôi cung cấp báo giá minh bạch sau khi trao đổi yêu cầu
+            chi tiết.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <h3>Có hỗ trợ sau khi dự án hoàn thành không?</h3>
+        </div>
+        <div class="faq-answer">
+          <p>
+            Có! Chúng tôi cung cấp gói bảo hành và hỗ trợ kỹ thuật trong 3-6
+            tháng đầu. Sau đó bạn có thể gia hạn gói hỗ trợ theo nhu cầu.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <h3>Website có responsive trên mobile không?</h3>
+        </div>
+        <div class="faq-answer">
+          <p>
+            Tất nhiên rồi! Mọi dự án của chúng tôi đều được thiết kế responsive,
+            hoạt động mượt mà trên mọi thiết bị từ desktop, tablet đến mobile.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <h3>Tôi có thể tự chỉnh sửa nội dung sau này không?</h3>
+        </div>
+        <div class="faq-answer">
+          <p>
+            Có! Chúng tôi sẽ hướng dẫn bạn sử dụng CMS để dễ dàng cập nhật nội
+            dung. Nếu cần hỗ trợ thêm, team luôn sẵn sàng giúp đỡ.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="newsletter" id="newsletter">
+      <h2>Liên Hệ Với Chúng Tôi</h2>
+      <p>Để lại thông tin, chúng tôi sẽ liên hệ với bạn sớm nhất</p>
+      <form class="newsletter-form">
+        <div class="form-row">
+          <input
+            type="text"
+            class="newsletter-input"
+            placeholder="Họ và tên *"
+            required
+          />
+          <input
+            type="tel"
+            class="newsletter-input"
+            placeholder="Số điện thoại *"
+            required
+          />
+        </div>
+        <input
+          type="email"
+          class="newsletter-input"
+          placeholder="Email của bạn *"
+          required
+        />
+        <textarea
+          class="newsletter-textarea"
+          placeholder="Tin nhắn của bạn..."
+        ></textarea>
+        <button type="submit" class="newsletter-btn">Gửi Thông Tin</button>
+      </form>
+    </section>
+
+    <section class="cta-section">
+      <h2>Sẵn Sàng Bắt Đầu?</h2>
+      <p>Hãy để chúng tôi biến ý tưởng của bạn thành hiện thực</p>
+      <a href="#" class="cta-button">Liên Hệ Ngay</a>
+    </section>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-column">
+          <h3>NexGen</h3>
+          <p style="color: #a0a0a0; line-height: 1.8">
+            Nền tảng công nghệ hàng đầu, mang đến giải pháp sáng tạo và hiệu quả
+            cho doanh nghiệp của bạn.
+          </p>
+          <div class="social-links">
+            <a href="#" class="social-link">📘</a>
+            <a href="#" class="social-link">🐦</a>
+            <a href="#" class="social-link">📸</a>
+            <a href="#" class="social-link">💼</a>
+          </div>
+        </div>
+
+        <div class="footer-column">
+          <h3>Sản Phẩm</h3>
+          <ul>
+            <li><a href="#">Tính năng</a></li>
+            <li><a href="#">Giá cả</a></li>
+            <li><a href="#">Case Study</a></li>
+            <li><a href="#">Reviews</a></li>
+            <li><a href="#">Updates</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h3>Công Ty</h3>
+          <ul>
+            <li><a href="#">Về chúng tôi</a></li>
+            <li><a href="#">Đội ngũ</a></li>
+            <li><a href="#">Tuyển dụng</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Liên hệ</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h3>Hỗ Trợ</h3>
+          <ul>
+            <li><a href="#">Trung tâm trợ giúp</a></li>
+            <li><a href="#">Tài liệu API</a></li>
+            <li><a href="#">Cộng đồng</a></li>
+            <li><a href="#">Điều khoản</a></li>
+            <li><a href="#">Chính sách</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2024 NexGen. Made with 💜 in Vietnam. All rights reserved.</p>
       </div>
     </footer>
+
+    <div
+      class="pulse-btn"
+      onclick="window.scrollTo({top: 0, behavior: 'smooth'})"
+    ></div>
+
+    <!-- Social Float Buttons -->
+    <div class="social-float">
+      <a
+        href="https://zalo.me/your-zalo-number"
+        target="_blank"
+        class="float-btn zalo-btn"
+        title="Chat Zalo"
+      >
+        💬
+      </a>
+      <a
+        href="https://facebook.com/your-page"
+        target="_blank"
+        class="float-btn facebook-btn"
+        title="Facebook"
+      >
+        📘
+      </a>
+    </div>
+
+    <script>
+      // Scroll Progress Bar
+      window.addEventListener("scroll", () => {
+        const scrollProgress = document.getElementById("scrollProgress");
+        const scrollHeight =
+          document.documentElement.scrollHeight -
+          document.documentElement.clientHeight;
+        const scrolled = (window.scrollY / scrollHeight) * 100;
+        scrollProgress.style.width = scrolled + "%";
+      });
+
+      // FAQ Accordion
+      document.querySelectorAll(".faq-question").forEach((question) => {
+        question.addEventListener("click", () => {
+          const faqItem = question.parentElement;
+          const isActive = faqItem.classList.contains("active");
+
+          // Close all FAQ items
+          document.querySelectorAll(".faq-item").forEach((item) => {
+            item.classList.remove("active");
+          });
+
+          // Open clicked item if it wasn't active
+          if (!isActive) {
+            faqItem.classList.add("active");
+          }
+        });
+      });
+
+      // Newsletter Form
+      document
+        .querySelector(".newsletter-form")
+        .addEventListener("submit", (e) => {
+          e.preventDefault();
+          const input = document.querySelector(".newsletter-input");
+          alert("Cảm ơn bạn đã đăng ký! Email: " + input.value);
+          input.value = "";
+        });
+
+      // Smooth scroll for navigation links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute("href"));
+          if (target) {
+            target.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+          }
+        });
+      });
+    </script>
   </body>
 </html>
