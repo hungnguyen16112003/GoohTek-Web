@@ -10,6 +10,7 @@ import ContactForm from "./components/ContactForm";
 import Footer from "./components/Footer";
 import ScrollToTop from "./components/ScrollToTop";
 import ScrollProgress from "./components/ScrollProgress";
+import FloatingContactButtons from "./components/FloatingContactButtons";
 
 export default function App() {
   return (
@@ -26,6 +27,7 @@ export default function App() {
       <ContactForm />
       <Footer />
       <ScrollToTop />
+      <FloatingContactButtons />
 
       <style jsx global>{`
         @keyframes slideDown {
