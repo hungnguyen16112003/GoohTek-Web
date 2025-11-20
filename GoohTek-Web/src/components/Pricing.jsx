@@ -2,7 +2,7 @@ const Pricing = () => {
   const plans = [
     {
       name: "Landing Page",
-      price: "399K",
+      price: "299K",
       description:
         "Website 1 trang giới thiệu sản phẩm/dịch vụ – tối ưu chuyển đổi.",
       features: [
@@ -75,7 +75,7 @@ const Pricing = () => {
 
     {
       name: "Website Bán Hàng",
-      price: "8.9M",
+      price: "7.9M",
       description:
         "Hệ thống bán hàng online với giỏ hàng – quản lý sản phẩm – thanh toán.",
       features: [
@@ -93,7 +93,7 @@ const Pricing = () => {
 
     {
       name: "Website Cao Cấp",
-      price: "12.9M",
+      price: "8.9M",
       featured: true,
       description:
         "Website cao cấp – đa ngôn ngữ – hiệu suất cực cao – chuẩn thương hiệu doanh nghiệp lớn.",

@@ -1,28 +1,22 @@
 const Team = () => {
   const team = [
     {
-      name: "Nguyễn Minh A",
+      name: "Nguyễn Quốc Hưng",
       role: "CEO & Founder",
       desc: "10+ năm kinh nghiệm trong lĩnh vực công nghệ và quản lý dự án",
-      avatar: "👨‍💼",
-    },
-    {
-      name: "Trần Thị B",
-      role: "Lead Designer",
-      desc: "Chuyên gia UI/UX với nhiều giải thưởng quốc tế về design",
-      avatar: "👩‍💻",
-    },
-    {
-      name: "Lê Văn C",
-      role: "Tech Lead",
-      desc: "Full-stack developer với kinh nghiệm xây dựng hệ thống lớn",
       avatar: "👨‍💻",
     },
     {
-      name: "Phạm Thị D",
-      role: "Creative Director",
-      desc: "Đam mê sáng tạo và tạo ra những trải nghiệm độc đáo",
-      avatar: "👩‍🎨",
+      name: "Lê Quốc Trí",
+      role: "Lead Designer",
+      desc: "Chuyên gia UI/UX với nhiều giải thưởng quốc tế về design",
+      avatar: "👨‍💻",
+    },
+    {
+      name: "Nguyễn Phúc Tấn",
+      role: "Tech Lead & Founder",
+      desc: "Full-stack developer với kinh nghiệm xây dựng hệ thống lớn",
+      avatar: "👨‍💻",
     },
   ];
 
@@ -32,7 +26,7 @@ const Team = () => {
         Đội Ngũ Chuyên Nghiệp
       </h2>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {team.map((member, idx) => (
           <div
             key={idx}
