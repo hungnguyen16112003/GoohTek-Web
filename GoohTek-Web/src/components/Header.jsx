@@ -5,13 +5,19 @@ const Header = () => {
         GoohTek
       </div>
       <nav className="flex gap-8">
-        {["Tính năng", "Giá cả", "Đội ngũ", "Liên hệ"].map((item, idx) => (
+        {[
+          { name: "Tính năng", href: "#tính năng" },
+          { name: "Dự án", href: "#dự-án" },
+          { name: "Giá cả", href: "#giá cả" },
+          { name: "Đội ngũ", href: "#đội ngũ" },
+          { name: "Liên hệ", href: "#liên hệ" },
+        ].map((item, idx) => (
           <a
             key={idx}
-            href={`#${item.toLowerCase()}`}
+            href={item.href}
             className="text-white hover:text-indigo-400 transition-all hover:-translate-y-0.5 relative after:absolute after:bottom-0 after:left-1/2 after:w-0 after:h-0.5 after:bg-gradient-to-r after:from-indigo-400 after:to-purple-500 after:transition-all after:-translate-x-1/2 hover:after:w-full"
           >
-            {item}
+            {item.name}
           </a>
         ))}
       </nav>

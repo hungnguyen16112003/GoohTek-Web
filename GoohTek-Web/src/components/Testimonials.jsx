@@ -2,20 +2,20 @@ const Testimonials = () => {
   const testimonials = [
     {
       text: "Sản phẩm tuyệt vời! Animation mượt mà, giao diện đẹp. Tôi đã giới thiệu cho rất nhiều bạn bè sử dụng.",
-      author: "Nguyễn Văn A",
-      role: "CEO - Tech Corp",
+      author: "Nguyễn Minh Tuấn",
+      role: "CEO - Tech Solutions",
       avatar: "👨",
     },
     {
       text: "Chưa bao giờ tôi thấy một trang web nào có animation đẹp và mượt mà như vậy. Đúng là đáng đồng tiền bát gạo!",
-      author: "Trần Thị B",
-      role: "Designer - Creative Agency",
+      author: "Phạm Thị Hương",
+      role: "Creative Director - Design Studio",
       avatar: "👩",
     },
     {
       text: "Đội ngũ hỗ trợ nhiệt tình, sản phẩm chất lượng. Tôi rất hài lòng và sẽ tiếp tục sử dụng lâu dài.",
-      author: "Lê Văn C",
-      role: "Developer - StartUp XYZ",
+      author: "Hoàng Đức Anh",
+      role: "CTO - Innovation Labs",
       avatar: "👨",
     },
   ];

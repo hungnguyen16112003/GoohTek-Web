@@ -89,3 +89,5 @@ VITE_GOOGLE_SCRIPT_URL=https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec
 
 **Lưu ý**: File `.env` không được commit lên Git (đã có trong `.gitignore`). Trên Vercel, bạn phải cấu hình qua Dashboard.
 
+
+

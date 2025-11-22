@@ -2,6 +2,7 @@ import Header from "./components/Header";
 import Hero from "./components/Hero";
 import Stats from "./components/Stats";
 import Features from "./components/Features";
+import Projects from "./components/Projects";
 import Testimonials from "./components/Testimonials";
 import Pricing from "./components/Pricing";
 import Team from "./components/Team";
@@ -20,6 +21,7 @@ export default function App() {
       <Hero />
       <Stats />
       <Features />
+      <Projects />
       <Testimonials />
       <Pricing />
       <Team />
