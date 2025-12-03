@@ -23,8 +23,8 @@ const FAQ = () => {
   ];
 
   return (
-    <section className="px-12 py-32 max-w-4xl mx-auto">
-      <h2 className="text-6xl font-bold text-center mb-16 bg-gradient-to-r from-indigo-400 via-purple-500 to-pink-400 bg-clip-text text-transparent">
+    <section className="px-4 sm:px-6 md:px-8 lg:px-12 py-20 md:py-32 max-w-4xl mx-auto w-full">
+      <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-center mb-12 md:mb-16 bg-gradient-to-r from-indigo-400 via-purple-500 to-pink-400 bg-clip-text text-transparent">
         Câu Hỏi Thường Gặp
       </h2>
 

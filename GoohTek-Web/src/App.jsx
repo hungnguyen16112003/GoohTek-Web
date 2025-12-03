@@ -1,9 +1,7 @@
 import Header from "./components/Header";
 import Hero from "./components/Hero";
-import Stats from "./components/Stats";
 import Features from "./components/Features";
 import Projects from "./components/Projects";
-import Testimonials from "./components/Testimonials";
 import Pricing from "./components/Pricing";
 import Team from "./components/Team";
 import FAQ from "./components/FAQ";
@@ -15,19 +13,19 @@ import FloatingContactButtons from "./components/FloatingContactButtons";
 
 export default function App() {
   return (
-    <div className="bg-black text-white min-h-screen">
+    <div className="bg-black text-white min-h-screen overflow-x-hidden w-screen flex items-center justify-center">
       <ScrollProgress />
       <Header />
-      <Hero />
-      <Stats />
-      <Features />
-      <Projects />
-      <Testimonials />
-      <Pricing />
-      <Team />
-      <FAQ />
-      <ContactForm />
-      <Footer />
+      <div className="w-full">
+        <Hero />
+        <Features />
+        <Projects />
+        <Pricing />
+        <Team />
+        <FAQ />
+        <ContactForm />
+        <Footer />
+      </div>
       <ScrollToTop />
       <FloatingContactButtons />
 
@@ -48,7 +46,7 @@ export default function App() {
             opacity: 0;
             transform: translateY(20px);
           }
-          to {
+          to 
             opacity: 1;
             transform: translateY(0);
           }

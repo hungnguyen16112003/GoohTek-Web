@@ -62,8 +62,8 @@ const ContactForm = () => {
   };
 
   return (
-    <section id="liên hệ" className="px-12 py-32 max-w-3xl mx-auto text-center">
-      <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-indigo-400 to-purple-500 bg-clip-text text-transparent">
+    <section id="liên hệ" className="px-4 sm:px-6 md:px-8 lg:px-12 py-20 md:py-32 max-w-3xl mx-auto w-full text-center">
+      <h2 className="text-4xl sm:text-5xl font-bold mb-6 bg-gradient-to-r from-indigo-400 to-purple-500 bg-clip-text text-transparent">
         Liên Hệ Với Chúng Tôi
       </h2>
       <p className="text-xl text-gray-400 mb-10">

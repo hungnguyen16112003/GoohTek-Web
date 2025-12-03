@@ -113,12 +113,12 @@ const Pricing = () => {
   ];
 
   return (
-    <section id="giá cả" className="px-12 py-32 max-w-7xl mx-auto">
-      <h2 className="text-6xl font-bold text-center mb-16 bg-gradient-to-r from-indigo-400 via-purple-500 to-pink-400 bg-clip-text text-transparent">
+    <section id="giá cả" className="px-4 sm:px-6 md:px-8 lg:px-12 py-20 md:py-32 max-w-7xl mx-auto w-full">
+      <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-center mb-12 md:mb-16 bg-gradient-to-r from-indigo-400 via-purple-500 to-pink-400 bg-clip-text text-transparent">
         Bảng Giá Linh Hoạt
       </h2>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 w-full">
         {plans.map((plan, idx) => (
           <div
             key={idx}
